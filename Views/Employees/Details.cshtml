@@ -1,0 +1,35 @@
+﻿@model EmployeeManagement.Models.Employee
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<h2>Employee Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.ID</dd>
+
+        <dt class="col-sm-2">First Name</dt>
+        <dd class="col-sm-10">@Model.FirstName</dd>
+
+        <dt class="col-sm-2">Last Name</dt>
+        <dd class="col-sm-10">@Model.LastName</dd>
+
+        <dt class="col-sm-2">Employee Code</dt>
+        <dd class="col-sm-10">@Model.EmployeeCode</dd>
+
+        <dt class="col-sm-2">Date Of Joining</dt>
+        <dd class="col-sm-10">@Model.DateOfJoiningDateTime</dd>
+
+        <dt class="col-sm-2">Date Of Birth</dt>
+        <dd class="col-sm-10">@Model.DateOfBirth.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Salary</dt>
+        <dd class="col-sm-10">@Model.Salary</dd>
+    </dl>
+    <a href="@Url.Action("Edit", "Employees", new { id = Model.ID })" class="btn btn-warning">Edit</a>
+    <a href="@Url.Action("Index", "Employees")" class="btn btn-primary">Back to List</a>
+</div>

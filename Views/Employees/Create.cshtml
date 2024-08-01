@@ -1,0 +1,57 @@
+﻿@model EmployeeManagement.Models.Employee
+
+@{
+    ViewData["Title"] = "Create Employee";
+}
+
+<div class="login-page">
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmployeeCode" class="control-label"></label>
+        <input asp-for="EmployeeCode" class="form-control" />
+        <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateOfJoiningDateTime" class="control-label"></label>
+        <input asp-for="DateOfJoiningDateTime" class="form-control" type="date" />
+        <span asp-validation-for="DateOfJoiningDateTime" class="text-danger"></span>
+    </div>
+
+
+
+    <div class="form-group">
+        <label asp-for="DateOfBirth" class="control-label"></label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Salary" class="control-label"></label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+        <div class="form-group flex-inline">
+        <input type="submit" value="Create" class="btn btn-primary" />
+            <a href="@Url.Action("Index", "Employees")" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+
+</div>
